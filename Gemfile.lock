@@ -137,7 +137,7 @@ DEPENDENCIES
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   coffee-script-source (= 1.8.0)
-  devise
+  devise (~> 3.4.1)
   execjs
   jbuilder (~> 2.0)
   jquery-rails
