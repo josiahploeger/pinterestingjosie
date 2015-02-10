@@ -21,3 +21,4 @@ module Pinteresting
     # config.i18n.default_locale = :de
   end
 end
+Excon.defaults[:ssl_verify_peer] = false
