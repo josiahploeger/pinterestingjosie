@@ -1,4 +1,3 @@
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -79,7 +78,6 @@ Rails.application.configure do
 
   #Required for Heroku
   #Note to set this to actual host name
-  config.action_mailer.default_url_options = { host: => 'josiahproject.herokuapp.com'}
-
+  #config.action_mailer.default_url_options = { host: => 'josiahproject.herokuapp.com'}
 end
 
