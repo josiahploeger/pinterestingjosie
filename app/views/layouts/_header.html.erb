@@ -1,6 +1,7 @@
 	
 	<nav class="navbar navbar-inverse" role="navigation">
   <div class="container-fluid">
+
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -21,6 +22,7 @@
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "My Pics", mypics_path %></li>
         <% if user_signed_in? %>
+
         <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>
         <% else %>
         <li><%= link_to "Sign In", new_user_session_path %></li>
