@@ -3,6 +3,8 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index]
 
+
+
   respond_to :html
 
   def index
@@ -15,7 +17,10 @@ class PinsController < ApplicationController
   end
 
   def new
-    @pin = current_user.pins.build
+    @user = current_user
+    #@pin = PinsUploader.new
+    @pin = @user.pins.build    
+    #@pin = current_user.pins.build
     respond_with(@pin)
   end
 
@@ -23,8 +28,8 @@ class PinsController < ApplicationController
   end
 
   def create
-    @pin = current_user.pins.build(pin_params)
-    @pin.save
+    @pin = current_user.Pins.build(pin_params)
+    @pin.save!
     respond_with(@pin)
   end
 
@@ -49,6 +54,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description)
+      params.require(:pin).permit(:description, :pins)
     end
 end
