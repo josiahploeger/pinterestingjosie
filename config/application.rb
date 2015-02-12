@@ -7,7 +7,7 @@ require 'rails/all'
 Bundler.require(*Rails.groups)
 
 #Require Carrierwave
-require 'carrierwave/orm/activerecord'
+#require 'carrierwave/orm/activerecord'
 
 
 module Pinteresting

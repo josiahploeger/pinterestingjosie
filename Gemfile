@@ -48,4 +48,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass'
 gem 'execjs'
 gem 'devise', '~> 3.4.1'
-gem 'carrierwave'
+gem 'paperclip'
+#Carrierwave didn't work out but here it is in case
+#gem 'carrierwave'

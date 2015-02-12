@@ -8,5 +8,5 @@ class User < ActiveRecord::Base
 
   has_many :pins
   
-  mount_uploader :pins, PinsUploader
+ 
 end

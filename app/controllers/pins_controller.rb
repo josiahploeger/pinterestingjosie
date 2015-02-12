@@ -9,11 +9,11 @@ class PinsController < ApplicationController
 
   def index
     @pins = Pin.all
-    respond_with(@pins)
+    #respond_with(@pins)
   end
 
   def show
-    respond_with(@pin)
+   #respond_with(@pin)
   end
 
   def new
@@ -21,26 +21,34 @@ class PinsController < ApplicationController
     #@pin = PinsUploader.new
     @pin = @user.pins.build    
     #@pin = current_user.pins.build
-    respond_with(@pin)
+    #respond_with(@pin)
   end
 
   def edit
   end
 
   def create
-    @pin = current_user.Pins.build(pin_params)
-    @pin.save!
-    respond_with(@pin)
+    @pin = current_user.pins.build(pin_params)
+      if @pin.save
+        redirect_to @pin, notice: 'Pin was successfully created.' #respond_with(@pin)
+      else
+        render action: 'new'
+      end
   end
 
   def update
-    @pin.update(pin_params)
-    respond_with(@pin)
+    if @pin.update(pin_params)
+      redirect_to @pin, notice: 'Pin was successfully updated'
+    else
+      render action: 'edit'
+    end
+    #respond_with(@pin)
   end
 
   def destroy
     @pin.destroy
-    respond_with(@pin)
+    #respond_with(@pin)
+    redirect_to pins_url
   end
 
   private
@@ -54,6 +62,6 @@ class PinsController < ApplicationController
     end
 
     def pin_params
-      params.require(:pin).permit(:description, :pins)
+      params.require(:pin).permit(:description, :image)
     end
 end
