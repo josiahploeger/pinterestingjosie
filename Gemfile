@@ -49,5 +49,6 @@ gem 'bootstrap-sass'
 gem 'execjs'
 gem 'devise', '~> 3.4.1'
 gem 'paperclip'
+gem 'aws-sdk'
 #Carrierwave didn't work out but here it is in case
 #gem 'carrierwave'
