@@ -19,6 +19,7 @@ gem 'jquery-rails'
 #gem 'jquery-ujs' looks like this gem is outdated
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
+gem 'jquery-turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
@@ -50,5 +51,7 @@ gem 'execjs'
 gem 'devise', '~> 3.4.1'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'masonry-rails'
+
 #Carrierwave didn't work out but here it is in case
 #gem 'carrierwave'
