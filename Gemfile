@@ -52,6 +52,7 @@ gem 'devise', '~> 3.4.1'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'masonry-rails'
-
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 #Carrierwave didn't work out but here it is in case
 #gem 'carrierwave'
